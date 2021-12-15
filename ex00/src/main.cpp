@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:47:27 by jceia             #+#    #+#             */
-/*   Updated: 2021/11/05 00:02:30 by jceia            ###   ########.fr       */
+/*   Updated: 2021/12/15 01:25:50 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 int main(void)
 {
-{
     const Animal* meta = new Animal();
     const Animal* dog = new Dog();
     const Animal* cat = new Cat();
@@ -25,4 +24,8 @@ int main(void)
     dog->makeSound();
     cat->makeSound(); // will output the cat sound!
     meta->makeSound();
+
+    delete meta;
+    delete dog;
+    delete cat;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:39:48 by jceia             #+#    #+#             */
-/*   Updated: 2021/11/04 23:53:50 by jceia            ###   ########.fr       */
+/*   Updated: 2021/12/15 01:23:25 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 
 Animal::Animal(void)
 {
-    std::cout << "Animal created" << std::endl;
+    std::cout << "Animal default constructor called" << std::endl;
 }
 
-Animal::Animal(std::string type)
+Animal::Animal(const std::string& type)
     : _type(type)
 {
-    std::cout << "Animal created" << std::endl;
+    std::cout << "Animal constructor (type <" << type << ">) called"
+        << std::endl;
 }
 
 Animal::~Animal()
 {
-    std::cout << "Animal destroyed" << std::endl;
+    std::cout << "Animal destructor called" << std::endl;
 }
 
 std::string Animal::getType(void) const
