@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:43:45 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/19 00:23:17 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/19 15:10:47 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@ Cat::Cat(void)
 {
     #ifdef DEBUG
     std::cout << "Cat created" << std::endl;
+    #endif
+}
+
+Cat::Cat(const Cat &rhs) : Animal(rhs)
+{
+    #ifdef DEBUG
+    std::cout << "Cat copy created" << std::endl;
     #endif
 }
 

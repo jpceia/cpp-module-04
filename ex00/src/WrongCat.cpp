@@ -21,6 +21,14 @@ WrongCat::WrongCat(void)
     #endif
 }
 
+WrongCat::WrongCat(const WrongCat &rhs)
+    : WrongAnimal(rhs)
+{
+    #ifdef DEBUG
+    std::cout << "WrongCat copy created" << std::endl;
+    #endif
+}
+
 WrongCat::~WrongCat(void)
 {
     #ifdef DEBUG

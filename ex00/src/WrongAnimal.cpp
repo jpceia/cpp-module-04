@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 00:18:22 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 00:19:24 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/19 15:11:27 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,14 @@ WrongAnimal::WrongAnimal(const std::string& type)
     #ifdef DEBUG
     std::cout << "WrongAnimal constructor (type <" << type << ">) called"
         << std::endl;
+    #endif
+}
+
+WrongAnimal::WrongAnimal(const WrongAnimal& rhs)
+    : _type(rhs._type)
+{
+    #ifdef DEBUG
+    std::cout << "WrongAnimal copy created" << std::endl;
     #endif
 }
 
