@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:41:13 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/15 01:22:57 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/15 01:31:28 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@
 
 class Cat : public Animal
 {
-    public:
-        // Constructors
-        Cat(void);
-        Cat(const Cat& rhs);
+public:
+    // Constructors
+    Cat(void);
+    Cat(const Cat& rhs);
 
-        // Destructor
-        ~Cat(void);
+    // Destructor
+    ~Cat(void);
 
-        // Assignment operator overload
-        Cat& operator= (const Cat& rhs);
+    // Assignment operator overload
+    Cat& operator= (const Cat& rhs);
 
-        // Other methods
-        void makeSound(void) const;
+    // Other methods
+    void makeSound(void) const;
 };
 
 #endif
