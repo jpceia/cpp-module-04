@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 00:18:22 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 15:11:27 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:03:50 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,13 @@ WrongAnimal::~WrongAnimal()
     #ifdef DEBUG
     std::cout << "WrongAnimal destructor called" << std::endl;
     #endif
+}
+
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& rhs)
+{
+    if (this != &rhs)
+        this->_type = rhs._type;
+    return *this;
 }
 
 std::string WrongAnimal::getType(void) const

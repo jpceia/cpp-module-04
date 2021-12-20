@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:37:58 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/19 00:20:16 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:01:57 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
     virtual ~WrongAnimal();
 
     // Assignation operator overload
-    WrongAnimal& operator=(const WrongAnimal& rhs);
+    virtual WrongAnimal& operator=(const WrongAnimal& rhs);
 
     // Getters
     std::string getType(void) const;

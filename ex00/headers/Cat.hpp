@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:41:13 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/19 01:03:20 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:02:51 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     ~Cat(void);
 
     // Assignment operator overload
-    using Animal::operator=;
+    Cat& operator= (const Cat& rhs);
 
     // Other methods
     void makeSound(void) const;

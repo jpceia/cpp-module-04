@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:45:05 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/19 15:11:08 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:06:01 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ Dog::~Dog(void)
     #ifdef DEBUG
     std::cout << "Dog destroyed" << std::endl;
     #endif
+}
+
+Dog& Dog::operator=(const Dog &rhs)
+{
+    Animal::operator=(rhs);
+    return *this;
 }
 
 void Dog::makeSound(void) const

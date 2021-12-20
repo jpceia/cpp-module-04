@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:42:57 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/19 01:03:40 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:02:15 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     ~Dog(void);
 
     // Assignment operator overload
-    using Animal::operator=;
+    Dog& operator= (const Dog& rhs);
 
     // other methods
     void makeSound(void) const;

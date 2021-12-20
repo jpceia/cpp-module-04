@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:37:58 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/15 01:26:42 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:02:48 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
     virtual ~Animal();
 
     // Assignation operator overload
-    Animal& operator=(const Animal& rhs);
+    virtual Animal& operator=(const Animal& rhs);
 
     // Getters
     std::string getType(void) const;
