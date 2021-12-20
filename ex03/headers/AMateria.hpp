@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:14:00 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 01:50:30 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:10:18 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ICharacter;
 
 class AMateria
 {
-protected:
+private:
     std::string _type;
 
 public:
@@ -28,7 +28,7 @@ public:
     AMateria(const AMateria& rhs);
     virtual ~AMateria(void);
 
-    AMateria& operator=(const AMateria& rhs);
+    virtual AMateria& operator=(const AMateria& rhs); // ?
 
     const std::string& getType(void) const;
     

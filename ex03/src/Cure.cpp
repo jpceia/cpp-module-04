@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:40:53 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 18:34:58 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:16:15 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ Cure::Cure(const Cure& rhs) : AMateria(rhs)
 
 Cure::~Cure(void)
 {
+}
+
+Cure& Cure::operator=(const Cure& rhs)
+{
+    (void)rhs;
+    return *this;
 }
 
 AMateria* Cure::clone(void) const

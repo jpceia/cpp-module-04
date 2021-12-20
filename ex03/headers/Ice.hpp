@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:17:27 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 01:42:01 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:09:21 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     ~Ice(void);
 
     // Assignation operator overload
-    using AMateria::operator=;
+    Ice& operator= (const Ice& rhs);
 
     // Other methods
     AMateria* clone(void) const;

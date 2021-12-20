@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:19:31 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 01:42:06 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:09:11 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     ~Cure(void);
 
     // Assignation operator overload
-    using AMateria::operator=;
+    Cure& operator= (const Cure& rhs);
 
     // Other methods
     AMateria* clone(void) const;
