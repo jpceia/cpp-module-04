@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:22:18 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 01:35:29 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 01:31:32 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 class Character : public ICharacter
 {
 private:
-    Character(void) {} // Private constructor - forbids default construction
+    Character(void) {}  // Private constructor
 
     std::string _name;
     AMateria* _inventory[4];
+
 public:
     // Constructors
     Character(const std::string& name);
@@ -33,11 +34,16 @@ public:
     // Assignation operator overload
     Character& operator=(const Character& rhs);
 
-    // Other methods
+    // Getters
     const std::string& getName(void) const;
+    const AMateria* getMateria(int idx) const;
+
+    // Other methods
     void equip(AMateria* m);
     void unequip(int idx);
     void use(int idx, ICharacter& target);
+
+    void info(void) const;
 };
 
 #endif

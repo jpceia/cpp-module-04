@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:20:22 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 01:44:52 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/19 18:33:31 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

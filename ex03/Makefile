@@ -6,11 +6,11 @@
 #    By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/04 23:37:29 by jceia             #+#    #+#              #
-#    Updated: 2021/12/19 01:11:53 by jpceia           ###   ########.fr        #
+#    Updated: 2021/12/20 01:50:24 by jpceia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = interface
+NAME        = final_fantasy
 
 INC_DIR     = headers
 SRC_DIR     = src
@@ -26,7 +26,7 @@ OS          = $(shell uname)
 
 FLAGS_WARN  = -Wall -Werror -Wextra -pedantic-errors
 FLAGS_INC   = -I$(INC_DIR)
-FLAGS_DEBUG = -g -fsanitize=address -DDEBUG
+FLAGS_DEBUG = -g -DDEBUG
 FLAGS_OPT   = -O3
 
 CXXFLAGS    = $(FLAGS_WARN) $(FLAGS_INC) -std=c++98
@@ -54,7 +54,7 @@ re: fclean all
 
 # Debug build
 debug:      CXXFLAGS += $(FLAGS_DEBUG)
-debug:      re
+debug:		all
 
 
-.PHONY:     all clean fclean re
+.PHONY:     all clean fclean re debug

@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:24:17 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/19 01:53:24 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 01:31:40 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class MateriaSource : public IMateriaSource
 {
 private:
-    AMateria* _materia;
+    AMateria* _inventory[4];
 
 public:
     // Constructors
@@ -35,6 +35,8 @@ public:
     // Other methods
     void learnMateria(AMateria*);
     AMateria* createMateria(std::string const & type);
+
+    void info(void) const;
 };
 
 #endif
