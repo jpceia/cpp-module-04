@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:22:18 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 01:31:32 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:19:15 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ private:
 
     std::string _name;
     AMateria* _inventory[4];
+    AMateria** _alloc_materia;
+    size_t  _n_alloc;
 
 public:
     // Constructors

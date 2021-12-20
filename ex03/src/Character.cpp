@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:33:24 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 01:44:45 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:20:33 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Character.hpp"
 
 Character::Character(const std::string& name) :
-    _name(name)
+    _name(name), _alloc_materia(NULL), _n_alloc(0)
 {
     std::cout << "* " << _name << " is born *" << std::endl;
     for (int i = 0; i < 4; i++)
@@ -25,20 +25,36 @@ Character::Character(const Character& rhs)
 {
     std::cout << "Creating a copy of " << rhs._name << std::endl;
     *this = rhs;
+    _alloc_materia = NULL;
+    _n_alloc = 0;
 }
 
 Character::~Character(void)
 {
     std::cout << "Destroying " << _name << "..." << std::endl;
+    for (int i = 0; i < _n_alloc; i++)
+        delete _alloc_materia[i];
+    delete[] _alloc_materia;
 }
 
 Character& Character::operator=(const Character& rhs)
 {
+    // stuff to do
     if (this != &rhs)
     {
         _name = rhs._name;
         for (int i = 0; i < 4; i++)
-            _inventory[i] = rhs._inventory[i];
+        {
+            if (rhs._inventory[i] != NULL)
+            {
+                _inventory[i] = rhs._inventory[i]->clone();
+                
+            }
+            else
+            {
+                _inventory[i] = NULL;
+            }
+        }
     }
     return *this;
 }
