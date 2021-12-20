@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:41:13 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/19 00:47:58 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/19 17:30:41 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
     Cat(const Cat& rhs);
 
     // Destructor
-    ~Cat(void);
+    virtual ~Cat(void);
 
     // Assignment operator overload
     Cat& operator= (const Cat& rhs);

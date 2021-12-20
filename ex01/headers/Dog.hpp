@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:42:57 by jceia             #+#    #+#             */
-/*   Updated: 2021/12/19 00:48:05 by jpceia           ###   ########.fr       */
+/*   Updated: 2021/12/19 17:30:46 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
     Dog(const Dog& rhs);
 
     // Destructor
-    ~Dog(void);
+    virtual ~Dog(void);
 
     // Assignment operator overload
     Dog& operator= (const Dog& rhs);
