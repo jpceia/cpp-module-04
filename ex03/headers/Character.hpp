@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:22:18 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 01:31:32 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/06 10:50:17 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CHARACTER_HPP
 
 # include "ICharacter.hpp"
+# include "GrowingArray.hpp"
 
 class Character : public ICharacter
 {
@@ -22,6 +23,7 @@ private:
 
     std::string _name;
     AMateria* _inventory[4];
+    GrowingArray<AMateria*> _old_inventory;
 
 public:
     // Constructors

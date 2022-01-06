@@ -6,7 +6,7 @@
 /*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:33:24 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 01:44:45 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/06 11:08:29 by jpceia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ Character::Character(const Character& rhs)
 
 Character::~Character(void)
 {
+    // deleting _inventory
+    for (std::size_t i = 0; i < 4; i++)
+        delete _inventory[i];
+    // deleting _old_inventory
+    for (std::size_t i = 0; i < _old_inventory.size(); i++)
+        delete _old_inventory[i];
     std::cout << "Destroying " << _name << "..." << std::endl;
 }
 
@@ -38,7 +44,15 @@ Character& Character::operator=(const Character& rhs)
     {
         _name = rhs._name;
         for (int i = 0; i < 4; i++)
-            _inventory[i] = rhs._inventory[i];
+        {
+            if (_inventory[i] != NULL)
+            {
+                delete _inventory[i];
+                _inventory[i] = NULL;
+            }
+            if (rhs._inventory[i] != NULL)
+                _inventory[i] = rhs._inventory[i]->clone();
+        }
     }
     return *this;
 }
@@ -62,7 +76,7 @@ void Character::equip(AMateria *m)
         if (_inventory[i] == NULL)
         {
             std::cout << _name << " equipped with " << m->getType() << std::endl;
-            _inventory[i] = m;
+            _inventory[i] = m->clone();
             return;
         }
     }
@@ -83,6 +97,7 @@ void Character::unequip(int idx)
     }
     // The unequip method must NOT delete Materia!
     std::cout << _name << " unequips " << _inventory[idx]->getType() << std::endl;
+    _old_inventory.push_back(_inventory[idx]);
     _inventory[idx] = NULL;
 }
 
