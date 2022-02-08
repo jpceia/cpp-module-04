@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:51:01 by jpceia            #+#    #+#             */
-/*   Updated: 2021/12/20 01:46:27 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/01/06 15:52:18 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,12 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& rhs)
         for (int i = 0; i < 4; i++)
         {
             if (_inventory[i] != NULL)
+            {
                 delete _inventory[i];
-            _inventory[i] = rhs._inventory[i]->clone();
+                _inventory[i] = NULL;
+            }
+            if (rhs._inventory[i] != NULL)
+                _inventory[i] = rhs._inventory[i]->clone();
         }
     }
     return *this;
