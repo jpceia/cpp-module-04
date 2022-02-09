@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpceia <joao.p.ceia@gmail.com>             +#+  +:+       +#+        */
+/*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:33:24 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/06 11:08:29 by jpceia           ###   ########.fr       */
+/*   Updated: 2022/02/09 16:43:04 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ICharacter.hpp"
 #include "Character.hpp"
+#include "GrowingArray.hpp"
 
 Character::Character(const std::string& name) :
     _name(name)
