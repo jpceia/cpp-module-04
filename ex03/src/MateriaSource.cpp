@@ -6,7 +6,7 @@
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:51:01 by jpceia            #+#    #+#             */
-/*   Updated: 2022/01/06 15:52:18 by jceia            ###   ########.fr       */
+/*   Updated: 2022/02/09 16:57:39 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ MateriaSource::~MateriaSource(void)
     for (int i = 0; i < 4; i++)
     {
         if (_inventory[i] != NULL)
+        {
             delete _inventory[i];
+            _inventory[i] = NULL;
+        }
     }
 }
 
