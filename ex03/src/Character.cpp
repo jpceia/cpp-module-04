@@ -6,7 +6,7 @@
 /*   By: jceia <jceia@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 01:33:24 by jpceia            #+#    #+#             */
-/*   Updated: 2022/02/09 16:43:04 by jceia            ###   ########.fr       */
+/*   Updated: 2022/02/09 16:57:19 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ const AMateria* Character::getMateria(int idx) const
 
 void Character::equip(AMateria *m)
 {
+    if (m == NULL)
+        return;
     for (int i = 0; i < 4; i++)
     {
         if (_inventory[i] == NULL)
